@@ -7,8 +7,6 @@ const imageHandler = require('./imageResponses.js');
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
 const onRequest = (request, response) => {
-  console.log(request.url);
-
   switch (request.url) {
     case '/dankmemes':
       imageHandler.getMeme(request, response);
